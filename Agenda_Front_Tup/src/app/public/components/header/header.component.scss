@@ -1,0 +1,76 @@
+$color-blanco : rgb(239, 240, 234);
+$color-verde: rgb(108,153,138);
+$color-1: rgb(104, 166, 201);// rgb(108,153,138);
+$color-2: rgb(63, 129, 167); //rgb(84, 117, 106);
+$tipografia-1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+header{
+  background-color: $color-blanco;
+
+}
+
+header .logo{
+  margin: 0;
+  padding: 20px 20px;
+  font-weight: bold;
+  color: $color-1;
+  font-size: 2em;
+}
+
+header .logo:hover{
+  color: $color-2;
+}
+
+header .container{
+  display: flex;
+  //flex-direction: column;
+  align-items: center;
+
+}
+
+header nav{
+  display: flex;
+  //flex-direction: column;
+  text-align: center;
+  padding: 25px 5px;
+}
+
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight:lighter;
+  color: black;
+  font-family: $tipografia-1;
+  font-size: 18px;
+}
+
+header a:hover{
+  color:  $color-1;
+}
+
+
+header #singout{
+  position:absolute;
+  right: 10px;
+  border: none;
+
+}
+
+header #icon-singout {
+  width: 35px;
+}
+
+header #icon-singout:hover{
+  filter: invert(12%) sepia(78%) saturate(7485%) hue-rotate(6deg) brightness(94%) contrast(113%);
+}
+
+
+@media (max-width:700px ) {
+  header .logo{
+    padding: 20px 5px;
+    font-size: 1.8em;
+  }
+  header a{
+    padding: 5px 6px;
+  }
+}

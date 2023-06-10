@@ -1,0 +1,122 @@
+$color-blanco : rgb(239, 240, 234);
+$color-1: rgb(104, 166, 201);// rgb(108,153,138);
+$color-2: rgb(63, 129, 167); //rgb(84, 117, 106);
+$tipografia-1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+.container{
+  height: 46px;
+  background-color: $color-blanco;
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.agenda-boton{
+  width: auto;
+  height:40px ;
+  border: none;
+  background-color: $color-1;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  padding : 0px 10px;
+  font-family: $tipografia-1;
+  color: $color-blanco;
+  font-size: 15px;
+}
+
+.agenda-boton:hover{
+  //background-color: $color-2;
+  width: auto;
+  height:46px ;
+  margin-top: 0px;
+}
+
+
+// .addagenda{
+//   grid-column: 2;
+//   display: grid;
+//   grid-template-columns: 30% 70%;
+//   background-color: red;//$color-blanco;
+// }
+
+
+.add-delete button{
+  border: none;
+  background: none;
+}
+
+.add-delete{
+  grid-column: 2;
+  position:absolute;
+  right: 10px;
+  display: grid;
+  grid-template-columns:  40px 20px 40px 40px;
+  grid-template-rows:  100%;
+}
+
+
+.add-delete input{
+  margin: 10px;
+  border-color: black;
+  border-style: ridge;
+  height: 20px;
+  width: 30px;
+  background-color:$color-blanco;
+  color: $color-1;
+  font-size: 15px;
+  grid-column: 4;
+}
+.add-delete input::placeholder{
+  color: $color-1;
+}
+
+.addagenda #new{
+  grid-column: 1;
+}
+.add-delete #agregar {
+  padding: 0 0;
+  grid-column: 3;
+  grid-row: 1;
+}
+// .add-delete #eliminar{
+//   padding: 0 0;
+//   grid-column: 4;
+// }
+
+
+#icon-agregar:hover{
+  filter: invert(48%) sepia(82%) saturate(422%) hue-rotate(84deg) brightness(94%) contrast(89%);
+}
+#icon-agregar{
+  width: 40px;
+}
+
+// #icon-eliminar:hover{
+//   filter: invert(12%) sepia(78%) saturate(7485%) hue-rotate(6deg) brightness(94%) contrast(113%);
+// }
+// #icon-eliminar{
+//   width: 40px;
+// }
+
+#icon-new:hover{
+  filter: invert(58%) sepia(44%) saturate(762%) hue-rotate(344deg) brightness(97%) contrast(90%);
+}
+#icon-new{
+  width: 40px;
+}
+
+
+
+@media (max-width:700px ) {
+  .Grande{
+    display:none ;
+  }
+}
+
+@media (min-width:700px ) {
+  .Pequeño{
+    display: none;
+  }
+}
+

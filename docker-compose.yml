@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./Agenda_Front_Tup
+      dockerfile: ./Dockerfile
+    ports:
+      - 4200:80
+    depends_on:
+      - backend
+  backend:
+    build:
+      context: ./Agenda_Back_Tup/Agenda_Back_Tup1
+      dockerfile: ./Dockerfile
+    ports:
+      - 7076:80
+

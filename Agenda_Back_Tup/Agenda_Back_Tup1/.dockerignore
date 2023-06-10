@@ -1,0 +1,20 @@
+# Ignorar archivos y directorios específicos
+bin
+obj
+.vs
+.sln
+.vscode
+*.csproj.user
+*.user
+*.log
+
+# Ignorar archivos de herramientas y paquetes de NuGet
+**/packages/
+**/bin/
+**/obj/
+
+# Ignorar archivos de caché y archivos temporales
+*.swp
+*.suo
+*.bak
+*.cache

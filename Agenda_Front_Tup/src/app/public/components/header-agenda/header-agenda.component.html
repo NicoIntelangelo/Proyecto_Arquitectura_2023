@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="Grande">
+    <div class="agendas">
+      <button class="agenda-boton" *ngFor="let agenda of agendas"
+      (click)="agendaSelec(agenda.id, agenda.nombre)" >{{agenda.nombre}}-{{agenda.id}}
+      </button>
+    </div>
+  </div>
+
+  <div class="Pequeño">
+    <div class="agendas">
+      <button class="agenda-boton" *ngFor="let agenda of agendas"
+      (click)="agendaSelec(agenda.id, agenda.nombre)" >{{agenda.id}}
+      </button>
+    </div>
+  </div>
+
+
+    <div class="add-delete">
+      <button  id="new" type="button" title="Crear Agenda" (click)="crearAgenda()"><img id="icon-new" src="./../../../../assets/img/create_black.png"></button>
+      <button id="agregar" title="Agregar Agenda" type="button" (click)="addAgenda(ingreso.value)"><img id="icon-agregar" src="./../../../../assets/img/add_black.png"></button>
+      <!-- <button id="eliminar" title="Eliminar Agenda" type="button" (dblclick)="deleteAgenda(ingreso.value)"><img id="icon-eliminar" src="./../../../../assets/img/trash_black.png"></button> -->
+      <input  title="Ingrese ID para Agregar" #ingreso type="text"  placeholder="ID" autocomplete="off" />
+    </div>
+
+
+
+</div>

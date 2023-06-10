@@ -1,0 +1,48 @@
+<div class="registro">
+
+  <div id="fondo-registro">
+
+    <section id="title">
+      <h1>Registrarse</h1>
+    </section>
+
+    <section id="form-registro">
+      <div class="container">
+
+        <form (ngSubmit)="registrarme(form)" #form="ngForm">
+          <div class="inputs">
+            <label for="name">Nombre</label>
+            <input type="name" name="nombre" id="nombre" autocomplete="nombre" placeholder="ingresa tu nombre"
+            [(ngModel)]="registerData.nombre" #name="ngModel">
+          </div>
+
+          <div class="inputs">
+              <label for="telefono">Telefono</label>
+              <input type="telefono" name="telefono" id="telefono" autocomplete="telefono" placeholder="ingresa tu número de telefono"
+              [(ngModel)]="registerData.telefono" #name="ngModel">
+          </div>
+
+          <div class="inputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="email" placeholder="ingresa tu direccion de email"
+            [(ngModel)]="registerData.email" #email="ngModel" pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$' [maxlength]="30">
+          </div>
+          <p id="mal-ingreso" *ngIf="email.touched && email.errors">Correo electrónico no válido.</p>
+
+          <div class="inputs">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Ingresa tu contraseña"
+            [(ngModel)]="registerData.password" [required]="true" [minlength]="6" #password="ngModel">
+          </div>
+          <div id="mal-ingreso" *ngIf="password.touched && password.errors">La contraseña debe tener al menos 6 caracteres.</div>
+
+          <div>
+            <button type="submit" [disabled]="form.invalid">Registrarme</button>
+            <button type="button" [routerLink]="['/inicio-sesion']">Inicio Sesion</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

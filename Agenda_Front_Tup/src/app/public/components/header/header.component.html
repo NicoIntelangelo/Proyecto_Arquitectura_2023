@@ -1,0 +1,13 @@
+<header>
+  <div class="container">
+    <a class="logo" [routerLink]="['']">Agenda</a>
+    <nav>
+      <!-- <a [routerLink]="['/new-contact']" *ngIf="isLogg() === true" >Nuevo Contacto</a> -->
+      <a [routerLink]="['/contacts']" *ngIf="isLogg() === true" >Contactos</a>
+    </nav>
+    <button id="singout" *ngIf="isLogg() === true" (dblclick)="logOut()" title="Salir"><img id="icon-singout" src="./../../../../assets/img/singout_black.png"></button>
+  </div>
+</header>
+
+
+<!-- onClick="alert('Hacer doble click para salir')" -->

@@ -1,0 +1,39 @@
+<div class="inicio-sesion">
+
+  <div id="fondo-inicio-sesion">
+
+    <section id="title">
+      <h1>Iniciar Sesión</h1>
+    </section>
+
+    <section id="form-iniciar-sesion">
+      <div class="container">
+
+        <form (ngSubmit)="login(form)" #form="ngForm">
+          <div class="inputs">
+            <label for="email">Email</label>
+
+            <input type="email" name="email" id="email" autocomplete="email" placeholder="ingresa tu direccion de email"
+              [(ngModel)]="authData.email" #email="ngModel" pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'>
+          </div>
+          <p id="mal-ingreso" *ngIf="email.touched && email.errors">Correo electrónico no válido.</p>
+
+          <div class="inputs">
+            <label for="password">Password</label>
+
+            <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Ingresa tu contraseña"
+              [(ngModel)]="authData.password" [required]="true" [minlength]="6" #password="ngModel"
+            >
+          </div>
+          <div id="mal-ingreso" *ngIf="password.touched && password.errors">La contraseña debe tener al menos 6 caracteres.</div>
+
+          <div>
+            <button type="submit" [disabled]="form.invalid">Ingresar</button>
+            <button type="button" [routerLink]="['/registrarse']">Registrarme</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </div>
+</div>

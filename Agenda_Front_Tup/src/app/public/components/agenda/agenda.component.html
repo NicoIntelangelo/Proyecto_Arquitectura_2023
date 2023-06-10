@@ -1,0 +1,94 @@
+<div *ngIf="editarAgenda === false; then thenBlock else elseBlock"></div>
+
+<!-- si editaragenda == false abre el html de nueve agenda, sino habre el de editar -->
+
+
+
+<ng-template #thenBlock>
+  <div class="fondo">
+    <div id="fondo-ingresos">
+
+      <section id="title">
+        <h1>Nueva Agenda</h1>
+      </section>
+
+      <section id="ingresos">
+        <div class="container">
+
+          <form (ngSubmit)="newagenda(form)" #form="ngForm">
+
+            <div class="inputs">
+              <label for="nombre">Nombre</label>
+              <input type="nombre" name="nombre" id="nombre" placeholder="Ingrese el nombre"
+              [(ngModel)]="agendaData.nombre" #nombre="ngModel" [maxlength]="10">
+            </div>
+
+            <div>
+              <button type="submit" >Cargar</button>
+              <!-- <button type="submit" >Cargar</button> -->
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #elseBlock>
+  <div class="fondo">
+    <div id="fondo-ingresos">
+
+      <section id="title">
+        <h1>Editar Agenda</h1>
+      </section>
+
+      <section id="ingresos">
+        <div class="container">
+
+          <form (ngSubmit)="editAgenda(form)" #form="ngForm">
+
+            <div class="inputs">
+              <label for="nombre">Nombre</label>
+              <input type="nombre" name="nombre" id="nombre" placeholder="Ingrese el nombre"
+              [(ngModel)]="agendaData.nombre" #nombre="ngModel" [maxlength]="10">
+            </div>
+
+            <div>
+              <button type="submit" >Cargar</button>
+              <!-- <button type="submit" >Cargar</button> -->
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- <div class="fondo">
+  <div id="fondo-ingresos">
+
+    <section id="title">
+      <h1>Nueva Agenda</h1>
+    </section>
+
+    <section id="ingresos">
+      <div class="container">
+
+        <form (ngSubmit)="newagenda(form)" #form="ngForm">
+
+          <div class="inputs">
+            <label for="nombre">Nombre</label>
+            <input type="nombre" name="nombre" id="nombre" placeholder="Ingrese el nombre"
+            [(ngModel)]="agendaData.nombre" #nombre="ngModel" [maxlength]="10">
+          </div>
+
+          <div>
+            <button type="submit" >Cargar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div> -->
